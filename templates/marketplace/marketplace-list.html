@@ -57,10 +57,11 @@
                                 <span class="badge bg-secondary">{{ item.condition }}</span>
                                 {% endif %}
                             </p>
-
+                            {% if item.category %}
                             <p class="mb-0">
                                 <strong>Category:</strong> {{ item.category.name }}
                             </p>
+                            {% endif %}
                         </div>
 
                     </div>

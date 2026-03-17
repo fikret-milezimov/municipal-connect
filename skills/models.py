@@ -53,6 +53,8 @@ class Skill(models.Model):
     categories = models.ManyToManyField(
         SkillCategory,
         related_name="skills",
+        blank=True,
+        null=True,
     )
 
     created_at = models.DateTimeField(auto_now_add=True)

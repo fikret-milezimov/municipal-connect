@@ -13,16 +13,17 @@
     <p class="mb-2"><strong>Level:</strong> {{ skill.level }}</p>
     {% endif %}
 
-    <p class="mb-3">
-        <strong>Categories:</strong>
-        {% for category in skill.categories.all %}
-            <span class="badge bg-secondary">
-                {{ category.name }}
-            </span>
-        {% empty %}
-            No categories
-        {% endfor %}
-    </p>
+    {% if skill.categories.exists %}
+        <p class="mb-3">
+            <strong>Categories:</strong>
+            {% for category in skill.categories.all %}
+                <span class="badge bg-secondary">
+                    {{ category.name }}
+                </span>
+            
+            {% endfor %}
+        </p>
+    {% endif %}
 
     <p class="text-muted mb-4">
         <strong>Contact:</strong>

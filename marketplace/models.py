@@ -68,6 +68,8 @@ class MarketplaceItem(models.Model):
         MarketplaceCategory,
         on_delete=models.CASCADE,
         related_name="items",
+        blank=True,
+        null=True,
     )
 
     image = models.ImageField(

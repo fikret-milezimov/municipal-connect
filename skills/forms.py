@@ -7,7 +7,8 @@ class SkillCreateForm(forms.ModelForm):
         model = Skill
         exclude = ["created_at", "slug"]
         widgets = {
-            "name": forms.TextInput(attrs={"placeholder": "Guitar lessons"}),
+            "name": forms.TextInput(attrs={"placeholder": "Guitar lessons",
+                                           "class": "form-control"}),
             "description": forms.Textarea(
                 attrs={"rows": 4, "placeholder": "What you can teach or offer, schedule, and details"}
             ),

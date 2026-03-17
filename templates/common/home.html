@@ -59,13 +59,17 @@
 
 
 <!-- Announcement Section -->
-{% if announcement %}
+
 <div class="glass-panel p-4 mb-4 text-center reveal reveal-delay-2">
     <div class="section-kicker mb-2">Community Update</div>
-    <h3>{{ announcement.title }}</h3>
-    <p class="mb-0">{{ announcement.content }}</p>
+    {% if announcement %}
+        <h3>{{ announcement.title }}</h3>
+        <p class="mb-0">{{ announcement.content }}</p>
+    {% else %}
+        <p class="text-muted mb-0">No announcements at the moment.</p>
+    {% endif %}
 </div>
-{% endif %}
+
 
 <!-- Preview Sections -->
 <div class="row g-4">

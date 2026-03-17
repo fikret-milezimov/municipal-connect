@@ -42,16 +42,17 @@
                         {% if skill.level %}
                         <p class="mb-2"><strong>Level:</strong> {{ skill.level }}</p>
                         {% endif %}
+                        {% if skill.categories.exists %}
                         <p class="mb-2">
                             <strong>Categories:</strong>
                             {% for category in skill.categories.all %}
                                 <span class="badge bg-secondary">
                                     {{ category.name }}
                                 </span>
-                            {% empty %}
-                                No categories
+                            
                             {% endfor %}
                         </p>
+                        {% endif %}
 
                         <p class="mb-0">
                             <strong>Contact:</strong>
